@@ -1,5 +1,54 @@
 Things to cover
--BitMap
--MergeSort
+-BitMap, a.k.a bit array, bit vector still a bit confused about this data structure.
+
+-Bubble sort, the most "hated" sort I suppose. You can use this in very few cases, say you have most of the data sorted,
+and only need to make a few swaps, than this is the sort for you, but generally not advisable. 
+
+Time: O(n^2)
+
+//Basic version of Bubble Sort
+int main() {
+		//Define array
+		int my[] = { 100,1, 2, 9, 5, 4, 8, 1,0 };
+		int len = sizeof(my) / sizeof(my[0]);
+
+		  //In bubble sort the greatest element will always be pushed all the way down, 
+		 //Hence, each  furhter pass only needs to go one less item iteration (len-x)
+		//Could enhance code by using swap with 
+		for (int x = 1; x < len; x++) {
+			for (int i = 0; i < len-x; i++) {
+
+				/*int one = my[i];
+				int two = my[i+1];
+
+				if (two < one) {
+					my[i] = two;
+					my[i + 1] = one;
+	
+				}*/
+
+				//Same as code above, just prettier
+				if (my[i] > my[i+1]) {
+					swap(my[i+1], my[i]);
+
+				}
+			}
+
+		}
+	
+		//Print Array
+		for (int x = 0; x < len; x++) {
+			cout << my[x] << endl;
+
+		}
+		return 0;
+
+	}
+  
+//There is an improved version, which skips passes based on a flag which asseses wheather a pass was made or not (if not end)
+TBC (to be coded)
+
+-MergeSort, will  have to go over the theory for this before coding 
+
 
 Additional Notes 
